@@ -1,0 +1,183 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Orellana">
+    <title>NoProblem | Panel de soporte TI</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- JavaScript -->
+    <script src="static/js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+                <img src="static/images/logo.png" alt="Logo NoProblem">
+            </a>
+
+            <!-- PERFIL -->
+            <div class="profile-icon">
+                <span aria-hidden="true">♙</span>
+            </div>
+
+            <!-- NAVEGACIÓN -->
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link active">
+                    Inicio
+                </a>
+
+                <a href="pages/mis-reportes.html" class="nav-link">
+                    Reportes
+                </a>
+
+                <a href="pages/contacto.html" class="nav-link">
+                    Contacto
+                </a>
+
+            </nav>
+
+            <!-- BOTÓN SIGUIENTE -->
+            <a href="pages/nuevo-reporte.html" class="next-link">
+                <span class="next-arrow" aria-hidden="true">→</span>
+                <span>Siguiente</span>
+            </a>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+
+            <section class="dashboard">
+
+                <!-- PANEL DE BIENVENIDA -->
+                <header class="welcome-panel">
+
+                    <h1>Panel de soporte TI</h1>
+
+                    <p>
+                        Bienvenido al centro de soporte NoProblem
+                    </p>
+
+                    <form class="search-form">
+
+                        <label for="buscar-inicio" class="visually-hidden">
+                            Buscar una incidencia
+                        </label>
+
+                        <input
+                            type="search"
+                            id="buscar-inicio"
+                            placeholder="Buscar una incidencia..."
+                        >
+
+                    </form>
+
+                </header>
+
+
+                <!-- ACCESOS RÁPIDOS -->
+                <section class="quick-actions">
+
+                    <!-- NUEVO REPORTE -->
+                    <a href="pages/nuevo-reporte.html" class="action-card">
+
+                        <span class="card-icon" aria-hidden="true">
+                            +
+                        </span>
+
+                        <h2>Nuevo Reporte</h2>
+
+                        <p>
+                            Registre una falla técnica
+                        </p>
+
+                    </a>
+
+
+                    <!-- MIS REPORTES -->
+                    <a href="pages/mis-reportes.html" class="action-card">
+
+                        <span class="card-icon" aria-hidden="true">
+                            ☷
+                        </span>
+
+                        <h2>Mis Reportes</h2>
+
+                        <p>
+                            Consultar estado de solicitudes
+                        </p>
+
+                    </a>
+
+                </section>
+
+
+                <!-- ESTADO DE SOLICITUDES -->
+                <section class="status-panel">
+
+                    <h2>Estado de las solicitudes</h2>
+
+
+                    <!-- REPORTE PENDIENTE -->
+                    <article class="status-item">
+
+                        <span class="status-icon" aria-hidden="true">
+                            ◷
+                        </span>
+
+                        <div class="status-info">
+
+                            <h3>Proyector sala 3</h3>
+
+                            <p>Reporte #002</p>
+
+                        </div>
+
+                        <span class="status-badge pending">
+                            Pendiente
+                        </span>
+
+                    </article>
+
+
+                    <!-- REPORTE RESUELTO -->
+                    <article class="status-item">
+
+                        <span class="status-icon" aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <div class="status-info">
+
+                            <h3>Conexión WiFi</h3>
+
+                            <p>Reporte #001</p>
+
+                        </div>
+
+                        <span class="status-badge resolved">
+                            Resuelto
+                        </span>
+
+                    </article>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

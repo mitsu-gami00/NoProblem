@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Orellana">
+
+    <title>NoProblem | Mis reportes</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">NoProblem</a>
+
+            <div class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="nuevo-reporte.html">Nuevo reporte</a>
+                <a href="mis-reportes.html" class="activo">Mis reportes</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mis-reportes-container">
+
+        <!-- TÍTULO -->
+        <section class="reportes-intro">
+
+            <h1>Mis reportes</h1>
+
+            <p>
+                Consulta el estado de tus solicitudes y revisa
+                la información de cada reporte.
+            </p>
+
+            <a href="nuevo-reporte.html" class="btn-nuevo-reporte">
+                + Crear nuevo reporte
+            </a>
+
+        </section>
+
+
+        <!-- FILTROS -->
+        <section class="reportes-filtros">
+
+            <h2>Filtrar reportes</h2>
+
+            <div class="filtros-grupo">
+
+                <div class="form-grupo">
+
+                    <label for="filtroEstado">Estado</label>
+
+                    <select id="filtroEstado">
+                        <option value="todos">Todos</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="resuelto">Resuelto</option>
+                    </select>
+
+                </div>
+
+                <div class="form-grupo">
+
+                    <label for="filtroCategoria">Categoría</label>
+
+                    <select id="filtroCategoria">
+                        <option value="todos">Todas</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                        <option value="conectividad">Conectividad</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTADO DE REPORTES -->
+        <section class="reportes-listado">
+
+            <h2>Solicitudes</h2>
+
+            <p class="reportes-demo">
+                Datos de ejemplo para visualizar la interfaz.
+            </p>
+
+            <!-- REPORTE 1 -->
+            <article class="reporte-card" data-estado="pendiente"
+                data-categoria="hardware">
+
+                <div class="reporte-card-header">
+
+                    <span class="reporte-id">Reporte #002</span>
+
+                    <span class="estado pendiente">
+                        Pendiente
+                    </span>
+
+                </div>
+
+                <h3>Proyector sala 3</h3>
+
+                <p>
+                    El proyector no muestra imagen al conectarlo
+                    al computador.
+                </p>
+
+                <div class="reporte-card-footer">
+
+                    <span>Categoría: Hardware</span>
+
+                    <a href="detalle-reporte.html?id=002">
+                        Ver detalles →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- REPORTE 2 -->
+            <article class="reporte-card" data-estado="resuelto"
+                data-categoria="conectividad">
+
+                <div class="reporte-card-header">
+
+                    <span class="reporte-id">Reporte #001</span>
+
+                    <span class="estado resuelto">
+                        Resuelto
+                    </span>
+
+                </div>
+
+                <h3>Conexión WiFi</h3>
+
+                <p>
+                    Problemas de conexión a la red inalámbrica
+                    del establecimiento.
+                </p>
+
+                <div class="reporte-card-footer">
+
+                    <span>Categoría: Conectividad</span>
+
+                    <a href="detalle-reporte.html?id=001">
+                        Ver detalles →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MENSAJE SIN RESULTADOS -->
+            <div id="sinResultados" hidden>
+                <p>No se encontraron reportes con esos filtros.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <p>
+            © 2026 NoProblem. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

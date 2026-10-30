@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Orellana">
+
+    <title>NoProblem | Contacto</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- JavaScript -->
+    <script src="../static/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                NoProblem
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="nuevo-reporte.html">Nuevo reporte</a>
+                <a href="mis-reportes.html">Mis reportes</a>
+                <a href="contacto.html" class="activo">Contacto</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contacto-container">
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <section class="contacto-info">
+
+            <h1>¿Necesitas ayuda?</h1>
+
+            <p>
+                Estamos aquí para ayudarte. Si tienes alguna duda,
+                sugerencia o problema con la plataforma, puedes
+                comunicarte con nuestro equipo.
+            </p>
+
+            <div class="contacto-detalle">
+
+                <div class="contacto-item">
+                    <h3>Soporte técnico</h3>
+                    <p>
+                        Cuéntanos si tienes dificultades utilizando
+                        la plataforma.
+                    </p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>Consultas</h3>
+                    <p>
+                        Responderemos tus dudas y consultas
+                        relacionadas con NoProblem.
+                    </p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>Sugerencias</h3>
+                    <p>
+                        Tus ideas nos ayudan a mejorar
+                        continuamente el servicio.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <section class="contacto-formulario">
+
+            <h2>Envíanos un mensaje</h2>
+
+            <p>
+                Completa el siguiente formulario y nos pondremos
+                en contacto contigo.
+            </p>
+
+            <form
+                id="formularioContacto"
+                action="https://formspree.io/f/xrpgoagr"
+                method="POST"
+            >
+
+                <!-- Identificación del formulario -->
+                <input
+                    type="hidden"
+                    name="formulario"
+                    value="Contacto NoProblem"
+                >
+
+                <!-- NOMBRE -->
+                <div class="form-grupo">
+
+                    <label for="nombre">Nombre completo</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingresa tu nombre"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CORREO -->
+                <div class="form-grupo">
+
+                    <label for="email">Correo electrónico</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ejemplo@correo.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ASUNTO -->
+                <div class="form-grupo">
+
+                    <label for="asunto">Asunto</label>
+
+                    <select
+                        id="asunto"
+                        name="asunto"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            Selecciona un asunto
+                        </option>
+
+                        <option value="Soporte técnico">
+                            Soporte técnico
+                        </option>
+
+                        <option value="Problema con un reporte">
+                            Problema con un reporte
+                        </option>
+
+                        <option value="Consulta general">
+                            Consulta general
+                        </option>
+
+                        <option value="Sugerencia">
+                            Sugerencia
+                        </option>
+
+                        <option value="Otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MENSAJE -->
+                <div class="form-grupo">
+
+                    <label for="mensaje">Mensaje</label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="6"
+                        placeholder="Describe tu consulta o problema..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- CONFIRMACIÓN -->
+                <div
+                    id="mensajeFormulario"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- BOTÓN -->
+                <button
+                    type="submit"
+                    id="btnEnviarContacto"
+                >
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <p>
+            © 2026 NoProblem. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

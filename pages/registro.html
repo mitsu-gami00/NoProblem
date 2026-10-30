@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Orellana">
+
+    <title>NoProblem | Crear cuenta</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">NoProblem</a>
+
+            <div class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="login.html">Iniciar sesión</a>
+                <a href="registro.html" class="activo">Registrarse</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="auth-container">
+
+        <section class="auth-panel">
+
+            <div class="auth-intro">
+
+                <h1>Crear una cuenta</h1>
+
+                <p>
+                    Regístrate en NoProblem para crear reportes,
+                    consultar tus solicitudes y recibir seguimiento
+                    de tus problemas técnicos.
+                </p>
+
+            </div>
+
+
+            <!-- FORMULARIO DE REGISTRO -->
+            <form id="formularioRegistro">
+
+                <!-- NOMBRE -->
+                <div class="form-grupo">
+
+                    <label for="nombreRegistro">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreRegistro"
+                        name="nombre"
+                        placeholder="Ingresa tu nombre"
+                        autocomplete="name"
+                        maxlength="100"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CORREO -->
+                <div class="form-grupo">
+
+                    <label for="emailRegistro">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailRegistro"
+                        name="email"
+                        placeholder="ejemplo@correo.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONTRASEÑA -->
+                <div class="form-grupo">
+
+                    <label for="passwordRegistro">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="passwordRegistro"
+                        name="password"
+                        placeholder="Crea una contraseña"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                    <small>
+                        La contraseña debe tener al menos 8 caracteres.
+                    </small>
+
+                </div>
+
+
+                <!-- CONFIRMAR CONTRASEÑA -->
+                <div class="form-grupo">
+
+                    <label for="confirmarPassword">
+                        Confirmar contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarPassword"
+                        name="confirmarPassword"
+                        placeholder="Repite tu contraseña"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MENSAJE -->
+                <div
+                    id="mensajeRegistro"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- BOTÓN -->
+                <button
+                    type="submit"
+                    id="btnRegistro"
+                >
+                    Crear cuenta
+                </button>
+
+            </form>
+
+
+            <!-- ACCESO AL LOGIN -->
+            <div class="auth-footer">
+
+                <p>
+                    ¿Ya tienes una cuenta?
+                    <a href="login.html">Inicia sesión</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <p>
+            © 2026 NoProblem. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

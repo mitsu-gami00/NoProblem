@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Orellana">
+
+    <title>NoProblem | Gestión de reportes</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">NoProblem</a>
+
+            <div class="nav-links">
+                <a href="dashboard.html">Panel</a>
+                <a href="gestion-reportes.html" class="activo">
+                    Reportes
+                </a>
+                <a href="contacto.html">Contacto</a>
+                <button type="button" id="btnCerrarSesion">
+                    Cerrar sesión
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="gestion-container">
+
+        <!-- INTRODUCCIÓN -->
+        <section class="gestion-intro">
+
+            <h1>Gestión de reportes</h1>
+
+            <p>
+                Administra las incidencias, revisa sus detalles
+                y actualiza el estado de las solicitudes.
+            </p>
+
+        </section>
+
+
+        <!-- FILTROS -->
+        <section class="gestion-filtros">
+
+            <h2>Buscar y filtrar</h2>
+
+            <div class="filtros-grupo">
+
+                <!-- BÚSQUEDA -->
+                <div class="form-grupo">
+
+                    <label for="buscarReporte">
+                        Buscar reporte
+                    </label>
+
+                    <input
+                        type="search"
+                        id="buscarReporte"
+                        placeholder="Buscar por ID o título..."
+                    >
+
+                </div>
+
+
+                <!-- ESTADO -->
+                <div class="form-grupo">
+
+                    <label for="filtroEstadoAdmin">
+                        Estado
+                    </label>
+
+                    <select id="filtroEstadoAdmin">
+
+                        <option value="todos">Todos</option>
+
+                        <option value="pendiente">
+                            Pendiente
+                        </option>
+
+                        <option value="proceso">
+                            En proceso
+                        </option>
+
+                        <option value="resuelto">
+                            Resuelto
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CATEGORÍA -->
+                <div class="form-grupo">
+
+                    <label for="filtroCategoriaAdmin">
+                        Categoría
+                    </label>
+
+                    <select id="filtroCategoriaAdmin">
+
+                        <option value="todos">Todas</option>
+
+                        <option value="hardware">
+                            Hardware
+                        </option>
+
+                        <option value="software">
+                            Software
+                        </option>
+
+                        <option value="conectividad">
+                            Conectividad
+                        </option>
+
+                        <option value="acceso">
+                            Acceso y cuentas
+                        </option>
+
+                        <option value="perifericos">
+                            Periféricos
+                        </option>
+
+                        <option value="otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRIORIDAD -->
+                <div class="form-grupo">
+
+                    <label for="filtroPrioridad">
+                        Prioridad
+                    </label>
+
+                    <select id="filtroPrioridad">
+
+                        <option value="todos">Todas</option>
+
+                        <option value="baja">Baja</option>
+
+                        <option value="media">Media</option>
+
+                        <option value="alta">Alta</option>
+
+                        <option value="critica">Crítica</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTADO DE REPORTES -->
+        <section class="gestion-listado">
+
+            <div class="seccion-encabezado">
+
+                <h2>Incidencias registradas</h2>
+
+                <span id="cantidadReportes">
+                    3 reportes de demostración
+                </span>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-reportes">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Usuario</th>
+                            <th>Problema</th>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="tablaGestionReportes">
+
+                        <!-- REPORTE 1 -->
+                        <tr
+                            data-estado="pendiente"
+                            data-categoria="hardware"
+                            data-prioridad="media"
+                        >
+
+                            <td>#002</td>
+
+                            <td>Usuario de ejemplo</td>
+
+                            <td>Proyector sala 3</td>
+
+                            <td>Hardware</td>
+
+                            <td>Media</td>
+
+                            <td>
+                                <span class="estado pendiente">
+                                    Pendiente
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="detalle-reporte.html?id=002">
+                                    Revisar
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <!-- REPORTE 2 -->
+                        <tr
+                            data-estado="proceso"
+                            data-categoria="conectividad"
+                            data-prioridad="critica"
+                        >
+
+                            <td>#003</td>
+
+                            <td>Usuario de ejemplo</td>
+
+                            <td>Equipo sin conexión</td>
+
+                            <td>Conectividad</td>
+
+                            <td>Crítica</td>
+
+                            <td>
+                                <span class="estado proceso">
+                                    En proceso
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="detalle-reporte.html?id=003">
+                                    Revisar
+                                </a>
+                            </td>
+
+                        </tr>
+
+
+                        <!-- REPORTE 3 -->
+                        <tr
+                            data-estado="resuelto"
+                            data-categoria="conectividad"
+                            data-prioridad="baja"
+                        >
+
+                            <td>#001</td>
+
+                            <td>Usuario de ejemplo</td>
+
+                            <td>Problema de WiFi</td>
+
+                            <td>Conectividad</td>
+
+                            <td>Baja</td>
+
+                            <td>
+                                <span class="estado resuelto">
+                                    Resuelto
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="detalle-reporte.html?id=001">
+                                    Revisar
+                                </a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+            <div id="sinReportesAdmin" hidden>
+
+                <p>
+                    No se encontraron reportes con los filtros seleccionados.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <p>
+            © 2026 NoProblem. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
