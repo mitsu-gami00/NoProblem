@@ -1,317 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chris Orellana">
-
-    <title>NoProblem | Nuevo reporte</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/style.css">
-
-    <!-- JavaScript -->
-    <script src="../static/js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo reporte – NoProblem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
-
-<body>
-
-    <!-- ENCABEZADO -->
-    <header>
-        <nav class="navbar">
-
-            <a href="../index.html" class="logo">
-                NoProblem
-            </a>
-
-            <div class="nav-links">
-                <a href="../index.html">Inicio</a>
-                <a href="nuevo-reporte.html" class="activo">Nuevo reporte</a>
-                <a href="mis-reportes.html">Mis reportes</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-
-        </nav>
-    </header>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="reporte-container">
-
-        <!-- INTRODUCCIÓN -->
-        <section class="reporte-intro">
-
-            <h1>Crear nuevo reporte</h1>
-
-            <p>
-                ¿Estás experimentando algún problema?
-                Completa el siguiente formulario para que
-                nuestro equipo de soporte pueda ayudarte.
-            </p>
-
-        </section>
-
-
-        <!-- FORMULARIO -->
-        <section class="reporte-formulario">
-
-            <h2>Información del problema</h2>
-
-            <p>
-                Proporciona los detalles necesarios para
-                facilitar el diagnóstico de tu solicitud.
-            </p>
-
-            <form
-                id="formularioReporte"
-                action="https://formspree.io/f/xrpgoagr"
-                method="POST"
-                enctype="multipart/form-data"
-            >
-
-                <!-- IDENTIFICACIÓN DEL FORMULARIO -->
-                <input
-                    type="hidden"
-                    name="formulario"
-                    value="Nuevo reporte NoProblem"
-                >
-
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="Nuevo reporte - NoProblem"
-                >
-
-
-                <!-- NOMBRE -->
-                <div class="form-grupo">
-
-                    <label for="nombreReporte">
-                        Nombre completo
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nombreReporte"
-                        name="nombre"
-                        placeholder="Ingresa tu nombre completo"
-                        autocomplete="name"
-                        maxlength="100"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- CORREO ELECTRÓNICO -->
-                <div class="form-grupo">
-
-                    <label for="emailReporte">
-                        Correo electrónico
-                    </label>
-
-                    <input
-                        type="email"
-                        id="emailReporte"
-                        name="email"
-                        placeholder="ejemplo@correo.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- TÍTULO DEL PROBLEMA -->
-                <div class="form-grupo">
-
-                    <label for="tituloReporte">
-                        Título del problema
-                    </label>
-
-                    <input
-                        type="text"
-                        id="tituloReporte"
-                        name="titulo"
-                        placeholder="Ej: Problemas de conexión a internet"
-                        maxlength="100"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- CATEGORÍA -->
-                <div class="form-grupo">
-
-                    <label for="categoriaReporte">
-                        Categoría del problema
-                    </label>
-
-                    <select
-                        id="categoriaReporte"
-                        name="categoria"
-                        required
-                    >
-
-                        <option value="" disabled selected>
-                            Selecciona una categoría
-                        </option>
-
-                        <option value="Hardware">
-                            Hardware
-                        </option>
-
-                        <option value="Software">
-                            Software
-                        </option>
-
-                        <option value="Conectividad">
-                            Conectividad
-                        </option>
-
-                        <option value="Acceso y cuentas">
-                            Acceso y cuentas
-                        </option>
-
-                        <option value="Periféricos">
-                            Periféricos
-                        </option>
-
-                        <option value="Otro">
-                            Otro
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- PRIORIDAD -->
-                <div class="form-grupo">
-
-                    <label for="prioridadReporte">
-                        Prioridad del problema
-                    </label>
-
-                    <select
-                        id="prioridadReporte"
-                        name="prioridad"
-                        required
-                    >
-
-                        <option value="" disabled selected>
-                            Selecciona una prioridad
-                        </option>
-
-                        <option value="Baja">
-                            Baja
-                        </option>
-
-                        <option value="Media">
-                            Media
-                        </option>
-
-                        <option value="Alta">
-                            Alta
-                        </option>
-
-                        <option value="Crítica">
-                            Crítica
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- DESCRIPCIÓN -->
-                <div class="form-grupo">
-
-                    <label for="descripcionReporte">
-                        Descripción del problema
-                    </label>
-
-                    <textarea
-                        id="descripcionReporte"
-                        name="descripcion"
-                        rows="7"
-                        minlength="10"
-                        placeholder="Describe qué sucede, cuándo comenzó el problema y qué soluciones has intentado..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <!-- EVIDENCIAS -->
-                <div class="form-grupo">
-
-                    <label for="evidenciasReporte">
-                        Adjuntar evidencias (opcional)
-                    </label>
-
-                    <input
-                        type="file"
-                        id="evidenciasReporte"
-                        name="evidencias"
-                        accept="image/jpeg,image/png,image/gif,image/webp,application/pdf"
-                        multiple
-                    >
-
-                    <small>
-                        Puedes adjuntar imágenes o documentos PDF
-                        que ayuden a identificar el problema.
-                    </small>
-
-                </div>
-
-
-                <!-- MENSAJE DE ESTADO -->
-                <div
-                    id="mensajeReporte"
-                    role="status"
-                    aria-live="polite"
-                ></div>
-
-
-                <!-- BOTONES -->
-                <div class="reporte-botones">
-
-                    <a
-                        href="../index.html"
-                        class="btn-cancelar"
-                    >
-                        Cancelar
-                    </a>
-
-                    <button
-                        type="submit"
-                        id="btnEnviarReporte"
-                    >
-                        Enviar reporte
-                    </button>
-
-                </div>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-
-        <p>
-            © 2026 NoProblem. Todos los derechos reservados.
-        </p>
-
-    </footer>
-
+<body class="fondo">
+<div class="pagina">
+  <header class="barra">
+    <a class="logo" href="../index.html" aria-label="NoProblem, inicio">
+      <svg viewBox="0 0 62 58" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="18" width="42" height="28" rx="4"/>
+        <path d="M14 54h20M24 46v8"/>
+        <path d="M14 31l7 7 13-14"/>
+        <path d="M40 10a10 10 0 0 1 10 10M40 2a18 18 0 0 1 18 18" stroke-width="4"/>
+      </svg>
+      <span>No</span>Problem
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/mis-reportes.html">Reportes</a>
+      <a href="../pages/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <form class="tarjeta reporte" action="../pages/confirmacion.html">
+      <h1>Nuevo Reporte</h1>
+      <p class="bajada">Describe el problema para que el equipo de soporte pueda ayudarte.</p>
+
+      <label class="campo">
+        <span>Tipo de problema</span>
+        <select name="tipo" required>
+          <option value="" selected disabled>Seleccionar categoría</option>
+          <option>Proyector</option>
+          <option>Computador</option>
+          <option>Conexión a internet</option>
+          <option>Otro</option>
+        </select>
+      </label>
+
+      <label class="campo">
+        <span>Ubicación</span>
+        <input type="text" name="ubicacion" placeholder="Ej. Sala 3, laboratorio de computación">
+      </label>
+
+      <label class="campo">
+        <span>Asunto</span>
+        <input type="text" name="asunto" placeholder="Ej. El proyector no enciende">
+      </label>
+
+      <label class="campo">
+        <span>Descripción del problema</span>
+        <textarea name="descripcion" placeholder="Explica qué sucede y cuándo comenzó..."></textarea>
+      </label>
+
+      <label class="adjuntar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 6.5v10a4 4 0 0 1-8 0V6a2.7 2.7 0 0 1 5.4 0v10a1.4 1.4 0 0 1-2.8 0V7"/></svg>
+        Adjuntar imagen (opcional)
+        <small>Fotografía del equipo o del error</small>
+        <input type="file" name="imagen" accept="image/*">
+      </label>
+
+      <div class="acciones">
+        <a class="btn btn--gris" href="../index.html">Cancelar</a>
+        <button class="btn" type="submit">Enviar reporte</button>
+      </div>
+    </form>
+  </main>
+</div>
 </body>
-
 </html>

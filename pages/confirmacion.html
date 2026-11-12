@@ -1,110 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chris Orellana">
-
-    <title>NoProblem | Reporte enviado</title>
-
-    <link rel="stylesheet" href="../static/css/style.css">
-    <script src="../static/js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte enviado – NoProblem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
+<body class="fondo">
+<div class="pagina">
+  <header class="barra">
+    <a class="logo" href="../index.html" aria-label="NoProblem, inicio">
+      <svg viewBox="0 0 62 58" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="18" width="42" height="28" rx="4"/>
+        <path d="M14 54h20M24 46v8"/>
+        <path d="M14 31l7 7 13-14"/>
+        <path d="M40 10a10 10 0 0 1 10 10M40 2a18 18 0 0 1 18 18" stroke-width="4"/>
+      </svg>
+      <span>No</span>Problem
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/mis-reportes.html">Reportes</a>
+      <a href="../pages/contacto.html">Contacto</a>
+    </nav>
+  </header>
 
-<body>
+  <main class="contenido">
+    <section class="tarjeta confirmacion">
+      <svg class="check" viewBox="0 0 78 78" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="39" cy="39" r="35"/><path d="M24 40l11 11 20-23"/></svg>
+      <h1>¡Reporte enviado!</h1>
+      <p>Tu solicitud se registró correctamente y está pendiente de revisión por el equipo de soporte TI.</p>
 
-    <!-- ENCABEZADO -->
-    <header>
-        <nav class="navbar">
+      <div class="resumen">
+        Número de solicitud<br>
+        #NP-0001<br>
+        Estado: <span class="estado">Pendiente <svg viewBox="0 0 24 24" fill="none" stroke="#f7a531" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></svg></span>
+      </div>
 
-            <a href="../index.html" class="logo">NoProblem</a>
-
-            <div class="nav-links">
-                <a href="../index.html">Inicio</a>
-                <a href="nuevo-reporte.html">Nuevo reporte</a>
-                <a href="mis-reportes.html">Mis reportes</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-
-        </nav>
-    </header>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="confirmacion-container">
-
-        <section class="confirmacion-panel">
-
-            <!-- ICONO -->
-            <div class="confirmacion-icono">
-                <span>✓</span>
-            </div>
-
-
-            <!-- MENSAJE -->
-            <h1>¡Reporte enviado correctamente!</h1>
-
-            <p>
-                Hemos recibido tu solicitud mediante nuestra
-                plataforma. Nuestro equipo podrá revisar la
-                información enviada.
-            </p>
-
-
-            <!-- INFORMACIÓN -->
-            <div class="confirmacion-info">
-
-                <h2>¿Qué sucede ahora?</h2>
-
-                <ul>
-                    <li>
-                        Tu información fue enviada correctamente.
-                    </li>
-
-                    <li>
-                        El equipo de soporte podrá revisar
-                        el problema.
-                    </li>
-
-                    <li>
-                        Podrás consultar el estado de tu solicitud
-                        cuando exista un sistema de seguimiento
-                        conectado.
-                    </li>
-                </ul>
-
-            </div>
-
-
-            <!-- ACCIONES -->
-            <div class="confirmacion-acciones">
-
-                <a href="../index.html" class="btn-inicio">
-                    Volver al inicio
-                </a>
-
-                <a href="nuevo-reporte.html" class="btn-nuevo">
-                    Crear otro reporte
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-
-        <p>
-            © 2026 NoProblem. Todos los derechos reservados.
-        </p>
-
-    </footer>
-
+      <a class="btn" href="mis-reportes.html">Ver mis reportes</a>
+    </section>
+  </main>
+</div>
 </body>
-
 </html>

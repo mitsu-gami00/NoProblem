@@ -1,232 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chris Orellana">
-
-    <title>NoProblem | Contacto</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/style.css">
-
-    <!-- JavaScript -->
-    <script src="../static/js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – NoProblem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
+<body class="fondo">
+<div class="pagina">
+  <header class="barra">
+    <a class="logo" href="../index.html" aria-label="NoProblem, inicio">
+      <svg viewBox="0 0 62 58" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="18" width="42" height="28" rx="4"/>
+        <path d="M14 54h20M24 46v8"/>
+        <path d="M14 31l7 7 13-14"/>
+        <path d="M40 10a10 10 0 0 1 10 10M40 2a18 18 0 0 1 18 18" stroke-width="4"/>
+      </svg>
+      <span>No</span>Problem
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/mis-reportes.html">Reportes</a>
+      <a href="../pages/contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </header>
 
-<body>
+  <main class="contenido">
+    <div class="contacto">
+      <section class="tarjeta ayuda">
+        <h1>¿Necesitas ayuda?</h1>
+        <p>Estamos aquí para ayudarte. Si tienes alguna duda, sugerencia o problema con la plataforma, puedes comunicarte con nuestro equipo.</p>
 
-    <!-- ENCABEZADO -->
-    <header>
-        <nav class="navbar">
+        <div class="temas">
+          <h2>Soporte técnico</h2>
+          <p>Cuéntanos si tienes dificultades utilizando la plataforma.</p>
+          <h2>Consultas</h2>
+          <p>Responderemos tus dudas y consultas relacionadas con NoProblem.</p>
+          <h2>Sugerencias</h2>
+          <p>Tus ideas nos ayudan a mejorar continuamente el servicio.</p>
+        </div>
+      </section>
 
-            <a href="../index.html" class="logo">
-                NoProblem
-            </a>
-
-            <div class="nav-links">
-                <a href="../index.html">Inicio</a>
-                <a href="nuevo-reporte.html">Nuevo reporte</a>
-                <a href="mis-reportes.html">Mis reportes</a>
-                <a href="contacto.html" class="activo">Contacto</a>
-            </div>
-
-        </nav>
-    </header>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="contacto-container">
-
-        <!-- INFORMACIÓN DE CONTACTO -->
-        <section class="contacto-info">
-
-            <h1>¿Necesitas ayuda?</h1>
-
-            <p>
-                Estamos aquí para ayudarte. Si tienes alguna duda,
-                sugerencia o problema con la plataforma, puedes
-                comunicarte con nuestro equipo.
-            </p>
-
-            <div class="contacto-detalle">
-
-                <div class="contacto-item">
-                    <h3>Soporte técnico</h3>
-                    <p>
-                        Cuéntanos si tienes dificultades utilizando
-                        la plataforma.
-                    </p>
-                </div>
-
-                <div class="contacto-item">
-                    <h3>Consultas</h3>
-                    <p>
-                        Responderemos tus dudas y consultas
-                        relacionadas con NoProblem.
-                    </p>
-                </div>
-
-                <div class="contacto-item">
-                    <h3>Sugerencias</h3>
-                    <p>
-                        Tus ideas nos ayudan a mejorar
-                        continuamente el servicio.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FORMULARIO -->
-        <section class="contacto-formulario">
-
-            <h2>Envíanos un mensaje</h2>
-
-            <p>
-                Completa el siguiente formulario y nos pondremos
-                en contacto contigo.
-            </p>
-
-            <form
-                id="formularioContacto"
-                action="https://formspree.io/f/xrpgoagr"
-                method="POST"
-            >
-
-                <!-- Identificación del formulario -->
-                <input
-                    type="hidden"
-                    name="formulario"
-                    value="Contacto NoProblem"
-                >
-
-                <!-- NOMBRE -->
-                <div class="form-grupo">
-
-                    <label for="nombre">Nombre completo</label>
-
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Ingresa tu nombre"
-                        autocomplete="name"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- CORREO -->
-                <div class="form-grupo">
-
-                    <label for="email">Correo electrónico</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="ejemplo@correo.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- ASUNTO -->
-                <div class="form-grupo">
-
-                    <label for="asunto">Asunto</label>
-
-                    <select
-                        id="asunto"
-                        name="asunto"
-                        required
-                    >
-
-                        <option value="" disabled selected>
-                            Selecciona un asunto
-                        </option>
-
-                        <option value="Soporte técnico">
-                            Soporte técnico
-                        </option>
-
-                        <option value="Problema con un reporte">
-                            Problema con un reporte
-                        </option>
-
-                        <option value="Consulta general">
-                            Consulta general
-                        </option>
-
-                        <option value="Sugerencia">
-                            Sugerencia
-                        </option>
-
-                        <option value="Otro">
-                            Otro
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- MENSAJE -->
-                <div class="form-grupo">
-
-                    <label for="mensaje">Mensaje</label>
-
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        rows="6"
-                        placeholder="Describe tu consulta o problema..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <!-- CONFIRMACIÓN -->
-                <div
-                    id="mensajeFormulario"
-                    role="status"
-                    aria-live="polite"
-                ></div>
-
-
-                <!-- BOTÓN -->
-                <button
-                    type="submit"
-                    id="btnEnviarContacto"
-                >
-                    Enviar mensaje
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-
-        <p>
-            © 2026 NoProblem. Todos los derechos reservados.
-        </p>
-
-    </footer>
-
+      <section class="tarjeta mensaje">
+        <svg class="icono" viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M13 3C7 3 2.5 6.8 2.5 11.5c0 2.3 1.1 4.4 2.9 5.9L4.5 22.5l5.300-2.9c1 .3 2.100.4 3.200.4 6 0 10.5-3.800 10.5-8.5S19 3 13 3z"/></svg>
+        <form action="#">
+          <h2>Envíanos un mensaje</h2>
+          <p>Completa el siguiente formulario y nos pondremos en contacto contigo.</p>
+          <input type="text" name="nombre" placeholder="Nombre" aria-label="Nombre">
+          <input type="email" name="correo" placeholder="Correo electrónico" aria-label="Correo electrónico">
+          <input type="text" name="asunto" placeholder="Asunto" aria-label="Asunto">
+          <textarea name="consulta" placeholder="Escribe tu consulta..." aria-label="Consulta"></textarea>
+          <button class="btn" type="submit">Enviar consulta</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</div>
 </body>
-
 </html>

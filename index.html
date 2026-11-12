@@ -1,177 +1,65 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chris Orellana">
-    <title>NoProblem | Panel de soporte TI</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="static/css/style.css">
-    <!-- JavaScript -->
-    <script src="static/js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio – NoProblem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class="fondo">
+<div class="home">
+  <aside class="lateral">
+    <a class="logo" href="index.html" aria-label="NoProblem, inicio">
+      <svg viewBox="0 0 62 58" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="18" width="42" height="28" rx="4"/>
+        <path d="M14 54h20M24 46v8"/>
+        <path d="M14 31l7 7 13-14"/>
+        <path d="M40 10a10 10 0 0 1 10 10M40 2a18 18 0 0 1 18 18" stroke-width="4"/>
+      </svg>
+      <span>No</span>Problem
+    </a>
+    <svg class="usuario" viewBox="0 0 34 34" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><circle cx="17" cy="17" r="15.5"/><circle cx="17" cy="13" r="4.5"/><path d="M8.5 25c1.5-3.5 5-5 8.5-5s7 1.5 8.5 5" stroke-linecap="round"/></svg>
+    <span class="actual" aria-current="page">Inicio</span>
+    <a class="pill" href="pages/mis-reportes.html">Reportes</a>
+    <a class="pill" href="pages/contacto.html">Contacto</a>
+  </aside>
 
-    <div class="app-container">
+  <main class="panel">
+    <section class="tarjeta bienvenida">
+      <h1>Panel de soporte TI</h1>
+      <p>Bienvenido al centro de soporte NoProblem</p>
+      <input class="busqueda" type="search" placeholder="Buscar una incidencia..." aria-label="Buscar una incidencia">
+    </section>
 
-        <!-- BARRA LATERAL -->
-        <aside class="sidebar">
+    <a class="tarjeta acceso" href="pages/nuevo-reporte.html">
+      <svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="13" cy="13" r="12"/><path d="M13 7.5v11M7.5 13h11"/></svg>
+      <strong>Nuevo Reporte</strong>
+      <span>Registre una falla técnica</span>
+    </a>
 
-            <!-- LOGO -->
-            <a href="index.html" class="logo">
-                <img src="static/images/logo.png" alt="Logo NoProblem">
-            </a>
+    <a class="tarjeta acceso" href="pages/mis-reportes.html">
+      <svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5l2 2 3.5-4M2 13l2 2 3.5-4M2 21l2 2 3.5-4M11.5 5.5H24M11.5 13.5H24M11.5 21.5H24"/></svg>
+      <strong>Mis Reportes</strong>
+      <span>Consultar estado de solicitudes</span>
+    </a>
 
-            <!-- PERFIL -->
-            <div class="profile-icon">
-                <span aria-hidden="true">♙</span>
-            </div>
-
-            <!-- NAVEGACIÓN -->
-            <nav class="main-nav">
-
-                <a href="index.html" class="nav-link active">
-                    Inicio
-                </a>
-
-                <a href="pages/mis-reportes.html" class="nav-link">
-                    Reportes
-                </a>
-
-                <a href="pages/contacto.html" class="nav-link">
-                    Contacto
-                </a>
-
-            </nav>
-
-        </aside>
-
-
-        <!-- CONTENIDO PRINCIPAL -->
-        <main class="main-content">
-
-            <section class="dashboard">
-
-                <!-- PANEL DE BIENVENIDA -->
-                <header class="welcome-panel">
-
-                    <h1>Panel de soporte TI</h1>
-
-                    <p>
-                        Bienvenido al centro de soporte NoProblem
-                    </p>
-
-                    <form class="search-form">
-
-                        <label for="buscar-inicio" class="visually-hidden">
-                            Buscar una incidencia
-                        </label>
-
-                        <input
-                            type="search"
-                            id="buscar-inicio"
-                            placeholder="Buscar una incidencia..."
-                        >
-
-                    </form>
-
-                </header>
-
-
-                <!-- ACCESOS RÁPIDOS -->
-                <section class="quick-actions">
-
-                    <!-- NUEVO REPORTE -->
-                    <a href="pages/nuevo-reporte.html" class="action-card">
-
-                        <span class="card-icon" aria-hidden="true">
-                            +
-                        </span>
-
-                        <h2>Nuevo Reporte</h2>
-
-                        <p>
-                            Registre una falla técnica
-                        </p>
-
-                    </a>
-
-
-                    <!-- MIS REPORTES -->
-                    <a href="pages/mis-reportes.html" class="action-card">
-
-                        <span class="card-icon" aria-hidden="true">
-                            ☷
-                        </span>
-
-                        <h2>Mis Reportes</h2>
-
-                        <p>
-                            Consultar estado de solicitudes
-                        </p>
-
-                    </a>
-
-                </section>
-
-
-                <!-- ESTADO DE SOLICITUDES -->
-                <section class="status-panel">
-
-                    <h2>Estado de las solicitudes</h2>
-
-
-                    <!-- REPORTE PENDIENTE -->
-                    <article class="status-item">
-
-                        <span class="status-icon" aria-hidden="true">
-                            ◷
-                        </span>
-
-                        <div class="status-info">
-
-                            <h3>Proyector sala 3</h3>
-
-                            <p>Reporte #002</p>
-
-                        </div>
-
-                        <span class="status-badge pending">
-                            Pendiente
-                        </span>
-
-                    </article>
-
-
-                    <!-- REPORTE RESUELTO -->
-                    <article class="status-item">
-
-                        <span class="status-icon" aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <div class="status-info">
-
-                            <h3>Conexión WiFi</h3>
-
-                            <p>Reporte #001</p>
-
-                        </div>
-
-                        <span class="status-badge resolved">
-                            Resuelto
-                        </span>
-
-                    </article>
-
-                </section>
-
-            </section>
-
-        </main>
-
-    </div>
-
+    <section class="tarjeta estado-solicitudes">
+      <h2>Estado de las solicitudes</h2>
+      <div class="fila">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f7a531" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></svg>
+        <div><b>Proyector sala 3</b><small>Reporte #002</small></div>
+        <span class="etiqueta etiqueta--pendiente">Pendiente</span>
+      </div>
+      <div class="fila">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1597ea" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4.5 4.5 0 0 0-6 5.6L3 17.6 6.4 21l5.5-5.5a4.5 4.5 0 0 0 5.6-6L14.6 12.4 11.6 9.4z"/></svg>
+        <div><b>Conexión WiFi</b><small>Reporte #001</small></div>
+        <span class="etiqueta etiqueta--revision">En revisión</span>
+      </div>
+    </section>
+  </main>
+</div>
 </body>
 </html>

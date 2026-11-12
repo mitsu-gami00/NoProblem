@@ -1,190 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chris Orellana">
-
-    <title>NoProblem | Mis reportes</title>
-
-    <link rel="stylesheet" href="../static/css/style.css">
-    <script src="../static/js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis reportes – NoProblem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
-
-<body>
-
-    <!-- ENCABEZADO -->
-    <header>
-        <nav class="navbar">
-
-            <a href="../index.html" class="logo">NoProblem</a>
-
-            <div class="nav-links">
-                <a href="../index.html">Inicio</a>
-                <a href="nuevo-reporte.html">Nuevo reporte</a>
-                <a href="mis-reportes.html" class="activo">Mis reportes</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-
-        </nav>
-    </header>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="mis-reportes-container">
-
-        <!-- TÍTULO -->
-        <section class="reportes-intro">
-
-            <h1>Mis reportes</h1>
-
-            <p>
-                Consulta el estado de tus solicitudes y revisa
-                la información de cada reporte.
-            </p>
-
-            <a href="nuevo-reporte.html" class="btn-nuevo-reporte">
-                + Crear nuevo reporte
-            </a>
-
-        </section>
-
-
-        <!-- FILTROS -->
-        <section class="reportes-filtros">
-
-            <h2>Filtrar reportes</h2>
-
-            <div class="filtros-grupo">
-
-                <div class="form-grupo">
-
-                    <label for="filtroEstado">Estado</label>
-
-                    <select id="filtroEstado">
-                        <option value="todos">Todos</option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="resuelto">Resuelto</option>
-                    </select>
-
-                </div>
-
-                <div class="form-grupo">
-
-                    <label for="filtroCategoria">Categoría</label>
-
-                    <select id="filtroCategoria">
-                        <option value="todos">Todas</option>
-                        <option value="hardware">Hardware</option>
-                        <option value="software">Software</option>
-                        <option value="conectividad">Conectividad</option>
-                    </select>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- LISTADO DE REPORTES -->
-        <section class="reportes-listado">
-
-            <h2>Solicitudes</h2>
-
-            <p class="reportes-demo">
-                Datos de ejemplo para visualizar la interfaz.
-            </p>
-
-            <!-- REPORTE 1 -->
-            <article class="reporte-card" data-estado="pendiente"
-                data-categoria="hardware">
-
-                <div class="reporte-card-header">
-
-                    <span class="reporte-id">Reporte #002</span>
-
-                    <span class="estado pendiente">
-                        Pendiente
-                    </span>
-
-                </div>
-
-                <h3>Proyector sala 3</h3>
-
-                <p>
-                    El proyector no muestra imagen al conectarlo
-                    al computador.
-                </p>
-
-                <div class="reporte-card-footer">
-
-                    <span>Categoría: Hardware</span>
-
-                    <a href="detalle-reporte.html?id=002">
-                        Ver detalles →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- REPORTE 2 -->
-            <article class="reporte-card" data-estado="resuelto"
-                data-categoria="conectividad">
-
-                <div class="reporte-card-header">
-
-                    <span class="reporte-id">Reporte #001</span>
-
-                    <span class="estado resuelto">
-                        Resuelto
-                    </span>
-
-                </div>
-
-                <h3>Conexión WiFi</h3>
-
-                <p>
-                    Problemas de conexión a la red inalámbrica
-                    del establecimiento.
-                </p>
-
-                <div class="reporte-card-footer">
-
-                    <span>Categoría: Conectividad</span>
-
-                    <a href="detalle-reporte.html?id=001">
-                        Ver detalles →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- MENSAJE SIN RESULTADOS -->
-            <div id="sinResultados" hidden>
-                <p>No se encontraron reportes con esos filtros.</p>
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-
-        <p>
-            © 2026 NoProblem. Todos los derechos reservados.
-        </p>
-
-    </footer>
-
+<body class="fondo">
+<div class="pagina">
+  <header class="barra">
+    <a class="logo" href="../index.html" aria-label="NoProblem, inicio">
+      <svg viewBox="0 0 62 58" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="18" width="42" height="28" rx="4"/>
+        <path d="M14 54h20M24 46v8"/>
+        <path d="M14 31l7 7 13-14"/>
+        <path d="M40 10a10 10 0 0 1 10 10M40 2a18 18 0 0 1 18 18" stroke-width="4"/>
+      </svg>
+      <span>No</span>Problem
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/mis-reportes.html" aria-current="page">Reportes</a>
+      <a href="../pages/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <section class="tarjeta mis-reportes">
+      <h1>Mis Reportes</h1>
+      <p class="bajada">Consulta el estado de tus solicitudes y revisa la información de cada reporte.</p>
+
+      <div class="mr-grid">
+        <div class="buscador">
+          <input type="search" placeholder="Buscar por número o problema..." aria-label="Buscar por número o problema">
+        </div>
+
+        <div class="filtros" role="group" aria-label="Filtrar por estado">
+          <button class="activo" type="button">Todos (3)</button>
+          <button type="button">Resueltos (1)</button>
+          <button type="button">Pendientes (1)</button>
+          <button type="button">En revisión (1)</button>
+        </div>
+
+        <div class="lista">
+          <article class="item">
+            <header>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#f7a531" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></svg>
+              <div>
+                <h2>Proyector sala 3</h2>
+                <div class="meta">#NP-0001 · Sala 3</div>
+              </div>
+            </header>
+            <span class="etiqueta etiqueta--pendiente">Pendiente</span>
+            <p>El proyector no enciende al iniciar la clase.</p>
+            <footer>
+              <span>Enviado: 28 oct. 2026</span>
+              <a href="#">Ver detalle →</a>
+            </footer>
+          </article>
+          <article class="item">
+            <header>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1597ea" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4.5 4.5 0 0 0-6 5.6L3 17.6 6.4 21l5.5-5.5a4.5 4.5 0 0 0 5.6-6L14.6 12.4 11.6 9.4z"/></svg>
+              <div>
+                <h2>Problema de conexión WiFi</h2>
+                <div class="meta">#NP-0002 · Laboratorio</div>
+              </div>
+            </header>
+            <span class="etiqueta etiqueta--revision">En revisión</span>
+            <p>Conexión inestable en varios equipos.</p>
+            <footer>
+              <span>Enviado: 27 oct. 2026</span>
+              <a href="#">Ver detalle →</a>
+            </footer>
+          </article>
+          <article class="item">
+            <header>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4be637" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+              <div>
+                <h2>Computador no inicia</h2>
+                <div class="meta">#NP-0003 · Sala 2</div>
+              </div>
+            </header>
+            <span class="etiqueta etiqueta--resuelto">Resuelto</span>
+            <p>Equipo revisado y operativo.</p>
+            <footer>
+              <span>Enviado: 21 oct. 2026</span>
+              <a href="#">Ver detalle →</a>
+            </footer>
+          </article>
+        </div>
+
+        <a class="cta" href="../pages/nuevo-reporte.html">
+          <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="13" fill="#fff"/><path d="M13 8v10M8 13h10" stroke="#111" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <strong>Nuevo Reporte</strong>
+          <span>Registre una falla técnica</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
 </body>
-
 </html>
